@@ -1,0 +1,8 @@
+
+### VS Code ###
+.vscode/
+
+### data ###
+data/
+results/
+__pycache__/
