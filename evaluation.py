@@ -14,7 +14,7 @@ os.chdir(os.path.dirname(os.path.abspath(__file__)))
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Hidden Fluid Mechanics - Evaluation')
     parser.add_argument('--datapath', default='./data/Cylinder2D_flower.mat', type=str, help='data path')
-    parser.add_argument('--modelpath', default='./hfm_0.pth', type=str, help='pretrained model path')
+    parser.add_argument('--modelpath', default='./hfm_0_last.pth', type=str, help='pretrained model path')
     args = parser.parse_args()
     print(args)
 
@@ -22,11 +22,11 @@ if __name__ == "__main__":
     data, _, _, T_star, X_star, Y_star, C_star, U_star, V_star, P_star = load_data(args.datapath, 30000)
 
     # Model
-    device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+    device = torch.device("cuda:0" if torch.cuda.is_available() else 'cpu')
     layer_list = [3] + 10 * [200] + [4]
     model = utils.pinn(data, layer_list)
-    model.load_state_dict(torch.load(args.modelpath))
-    #model.load_state_dict(torch.load(args.modelpath, map_location=torch.device('cpu')))
+    #model.load_state_dict(torch.load(args.modelpath))
+    model.load_state_dict(torch.load(args.modelpath, map_location=torch.device('cpu')))
 
     with torch.no_grad():
         # Prediction
