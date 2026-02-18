@@ -47,6 +47,9 @@ if __name__ == "__main__":
     it = 0
     min_loss = 1
 
+    #static computational graph
+    torch.compile(model)
+    
     print("Start training the model..")
     while running_time < args.total_time:
 
