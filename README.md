@@ -7,3 +7,5 @@
     + available solution: raise the weight of loss_e during training
 - 2026/2/19: training the model to 18 hours
     + change loss function: L = 0.1 * loss_c + 0.9 * loss_e
+    + sth wrong: p_error seems to converge to 1.8
+    + considering to join L-BFGS to train for 10 epochs
