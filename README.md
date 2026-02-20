@@ -17,3 +17,4 @@ personal HFM study material
     + add auto-adjust weight of loss function
     + add pressure Poisson's equation to specifically restrain pressure
     + Poisson: e5 = p_xx + p_yy + (u_x ^ 2 + 2 * u_y * v_x + v_y ^ 2)
+    + loss function: loss = 0.1 * loss_c + loss_e
