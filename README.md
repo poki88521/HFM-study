@@ -16,3 +16,4 @@ personal HFM study material
 - 2026/2/20: modify model to optimize predicting p:
     + add auto-adjust weight of loss function
     + add pressure Poisson's equation to specifically restrain pressure
+    + Poisson: $e_5$
