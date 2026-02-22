@@ -1,6 +1,9 @@
 # HFM-study
 personal HFM study material
 
+## 更新
+
+
 ## update
 - 2026/2/16: change activate function to swish (x * sigmoid(beta * x)) (beta could be updated)
 - 2026/2/17: training the model
