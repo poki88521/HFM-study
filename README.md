@@ -21,5 +21,5 @@ personal HFM study material
     + add pressure Poisson's equation to specifically restrain pressure
     + Poisson: e5 = p_xx + p_yy + (u_x ^ 2 + 2 * u_y * v_x + v_y ^ 2)
     + loss function auto-adjust
-- 2026/2/21: train model for 12 hours (58000 epochs), works
-- 2026/2/22: train model for 6 hours, works but fluctuate significantly
+- 2026/2/21: train model for 12 hours (to 58000 epochs), works
+- 2026/2/22: train model for 6 hours(to 88000 epochs), works but fluctuate significantly
