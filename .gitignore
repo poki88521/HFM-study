@@ -1,0 +1,11 @@
+
+### VS Code ###
+.vscode/
+
+### data ###
+data/
+logs/
+__pycache__/
+mat_to_numpy.py
+evaluation.py
+utils.py
