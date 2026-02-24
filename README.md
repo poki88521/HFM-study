@@ -8,7 +8,12 @@ personal HFM study material
       + 问题：p的收敛显著慢于c、u和v
       + 可能可用的解决方法：提高e的损失在总损失中的占比
 - 2026/2/19 训练模型至18小时
-      + 修改：损失函数改为loss = 0.1 * loss_c + 0.9 * loss_e 
+      + 修改：损失函数改为loss = 0.1 * loss_c + 0.9 * loss_e
+      + 问题：p几乎收敛到1.8不动了，不太对劲
+      + 可用方法：考虑用L-BFGS优化器训练数十轮
+- 2026/2/20
+      + 使用L-BFGS优化器训练了10轮（分别采用30k和60k样本量）
+  
 
 ## update
 - 2026/2/16: change activate function to swish (x * sigmoid(beta * x)) (beta could be updated)
@@ -33,3 +38,5 @@ personal HFM study material
       + train model for 6 hours(to 117000 iterations), works but still fluctuate significantly
       + still converging slower than original program
       + spend 30 CNY to purchase quantity of calculation
+- 2026/2/24:
+      + it seems that the model is worse than before (haven't evaluated to prove)
