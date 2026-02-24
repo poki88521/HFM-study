@@ -21,6 +21,11 @@ personal HFM study material
 - 2026/2/22 训练模型6小时（至88000次迭代）和6小时（至117000次迭代）
       + 对p误差随迭代次数的下降有效，但p的误差震荡的很明显
       + 比原论文随迭代次数下降的慢
+- 2026/2/24 训练模型6小时（至147000次迭代）
+      + 误差波动的更加明显（尤其是p，在0.5至1.5之间波动）
+      + 注意到总损失一直在下降
+      + 可能的解决方案：将权重约束在-5到5之间防止权重过大或者过小
+      + 本来计划停止训练，但决定修改后明天再训练6小时
 
   
 
@@ -49,3 +54,6 @@ personal HFM study material
       + spend 30 CNY to purchase quantity of calculation
 - 2026/2/24:
       + it seems that the model is worse than before (haven't evaluated to prove)
+      + minimum is lower than before but fluctuate more than before
+      + noticed that total loss is continuously decrease in minus range
+      + available solution: restrain the range of weight of loss and train for 6 hours
