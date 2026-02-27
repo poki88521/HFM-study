@@ -8,7 +8,7 @@ personal HFM study material
       + 问题：p的收敛显著慢于c、u和v
       + 可能可用的解决方法：提高e的损失在总损失中的占比
 - 2026/2/19 训练模型至18小时
-      + 修改：损失函数改为loss = 0.1 * loss_c + 0.9 * loss_e
+      + 修改：损失函数改为loss = 0.1 * $loss_c$ + 0.9 * $loss_e$
       + 问题：p几乎收敛到1.8不动了，不太对劲
       + 可用方法：考虑用L-BFGS优化器训练数十轮
 - 2026/2/20 优化、修改模型（新模型版本：p）
@@ -26,6 +26,11 @@ personal HFM study material
       + 注意到总损失一直在下降
       + 可能的解决方案：将权重约束在-5到5之间防止权重过大或者过小
       + 本来计划停止训练，但决定修改后明天再训练6小时
+- 2026/2/25 训练模型6小时（至175000次迭代）
+      + 误差依然波动的很厉害但是最小值在下降
+      + 结束模型训练并绘制迭代次数与损失、误差的关系图
+      + 奇怪的是随着迭代次数增加p的误差波动的越来越明显
+      + 和ai（deepseek）讨论后决定先尝试做一个可视化观察一下流场排除复杂度的问题（matplotlib）
 
   
 
@@ -57,3 +62,9 @@ personal HFM study material
       + minimum is lower than before but fluctuate more than before
       + noticed that total loss is continuously decrease in minus range
       + available solution: restrain the range of weight of loss and train for 6 hours
+      + train the model for 6 hours(to 147000 iterations)
+- 2026/2/25:
+      + train model for 6 hours(to 175000 iterations)
+      + still fluctuate significantly
+      + finish the training and draw the plot according to the data
+      + it is strange that the error of p fluctuates strong as iter growing
