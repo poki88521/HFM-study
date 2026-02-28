@@ -1,6 +1,8 @@
 # HFM-study
 personal HFM study material
-
+## 简介
+- 基于Pytorch的Hidden Fluid Mechanics模型研究仓库
+- 注：原论文模型基于Tensorflow构建（[链接](https://github.com/maziarraissi/HFM)），此处采用Pytorch的版本（[链接](https://github.com/kimy-de/HFM)）
 ## 更新
 - 2026/2/16 把激活函数改成了可以学习参数的swish（即x * sigmoid(beta * x)）（模型版本：swish）
 - 2026/2/17 在Cloud Studio上训练模型（因为有免费额度）
