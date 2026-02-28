@@ -6,7 +6,7 @@ personal HFM study material
 - 训练模型使用Cloud Studio的Pytorch应用
 - 研究推进主要依赖的ai为deepseek
 ## 更新
-- 2026/2/16 把激活函数改成了可以学习参数的swish（即x * sigmoid(beta * x)）（模型版本：swish）
+1. 2026/2/16 把激活函数改成了可以学习参数的swish（即x * sigmoid(beta * x)）（模型版本：swish）
 - 2026/2/17 训练模型
 - 2026/2/18 训练模型至6、12小时（约68000次迭代）
       + 问题：p的收敛显著慢于c、u和v
