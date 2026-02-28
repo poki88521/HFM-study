@@ -3,9 +3,11 @@ personal HFM study material
 ## 简介
 - 基于Pytorch的Hidden Fluid Mechanics模型研究仓库
 - 注：原论文模型基于Tensorflow构建（[链接](https://github.com/maziarraissi/HFM)），此处采用Pytorch的版本（[链接](https://github.com/kimy-de/HFM)）
+- 训练模型使用Cloud Studio的Pytorch应用
+- 研究推进主要依赖的ai为deepseek
 ## 更新
 - 2026/2/16 把激活函数改成了可以学习参数的swish（即x * sigmoid(beta * x)）（模型版本：swish）
-- 2026/2/17 在Cloud Studio上训练模型（因为有免费额度）
+- 2026/2/17 训练模型
 - 2026/2/18 训练模型至6、12小时（约68000次迭代）
       + 问题：p的收敛显著慢于c、u和v
       + 可能可用的解决方法：提高e的损失在总损失中的占比
@@ -17,7 +19,7 @@ personal HFM study material
       + 使用L-BFGS优化器训练了10轮（分别采用30k和60k样本量）p的损失几乎没有变化
       + 给loss_c和每一个e的loss添加了可学习的权重
       + 引入压力泊松方程得到的e_5对压力进行约束
-      + e5 = p_xx + p_yy + (u_x ^ 2 + 2 * u_y * v_x + v_y ^ 2)
+      + $e5 = p_xx + p_yy + (u_x ^ 2 + 2 * u_y * v_x + v_y ^ 2)$
       + 在新模型中同时引入对迭代次数和相对l2误差、损失函数的记录（保存在log中）
 - 2026/2/21 训练模型12小时（至58000次迭代）对p的约束有效
 - 2026/2/22 训练模型6小时（至88000次迭代）和6小时（至117000次迭代）
